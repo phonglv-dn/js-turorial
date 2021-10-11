@@ -1,12 +1,21 @@
-var obj = {
-    firstName:'Le',
-    lastName:'Phong',
-    age: 20,
-    favorite:'Code'
-};
-console.log('firstName ban dau la: ',obj.firstName);
-obj.firstName = 'Tran'
-console.log('firstName sau khi thay la: ',obj.firstName);
-console.log('lastName ban dau la: ',obj.lastName);
-obj.lastName = 'Tu';
-console.log('lastName sau khi thay la: ',obj.lastName);
+const mathFunction = ((a,b,math)=> {
+    if (typeof a === 'number' && typeof b === 'number'){
+        switch(math) {
+            case '+':
+                console.log(a,math,b,' = ',a + b)
+                break;
+            case '-':
+                console.log(a,math,b,' = ',a - b)
+                break;
+            case '*':
+                console.log(a,math,b,' = ',a * b)
+                break;
+            case '/':
+                console.log(a,math,b,' = ',a / b)
+                break;
+        }
+    } else
+    console.log('Biến a và b phải là kiểu số')
+})
+mathFunction(3,4,'/');
+mathFunction('4',4,'-');
