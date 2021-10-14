@@ -1,21 +1,7 @@
-const mathFunction = ((a,b,math)=> {
-    if (typeof a === 'number' && typeof b === 'number'){
-        switch(math) {
-            case '+':
-                console.log(a,math,b,' = ',a + b)
-                break;
-            case '-':
-                console.log(a,math,b,' = ',a - b)
-                break;
-            case '*':
-                console.log(a,math,b,' = ',a * b)
-                break;
-            case '/':
-                console.log(a,math,b,' = ',a / b)
-                break;
-        }
-    } else
-    console.log('Biến a và b phải là kiểu số')
-})
-mathFunction(3,4,'/');
-mathFunction('4',4,'-');
+const arr = [1,3,5,6,9,14];
+let sumArr = 0;
+for (var i = 0; i < arr.length; i++) {
+    sumArr = sumArr + arr[i];
+}
+console.log(sumArr);
+document.write('1. Tổng của mảng là: ', sumArr);
