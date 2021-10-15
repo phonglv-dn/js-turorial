@@ -2,8 +2,6 @@ let galleris = document.querySelectorAll('.gallery img');
 let modal = document.querySelector('.modal');
 let fullImg = document.querySelector('.full-img');
 
-console.log(galleris);
-
 galleris.forEach(function (gallerisItem) {
     gallerisItem.addEventListener('click', function(){
         modal.classList.add('open');
@@ -13,8 +11,9 @@ galleris.forEach(function (gallerisItem) {
     })
 })
 
-modal.addEventListener('click', function(e) {
-    if(modal.classList.contains('open')) {
-        modal.classList.remove('open');
-    }
-})
+modal.addEventListener('click',(e) =>{
+    if(e.target.classList.contains("modal")){
+        modal.classList.remove("open");
+        fullImg.classList.remove("open");
+    };
+});
